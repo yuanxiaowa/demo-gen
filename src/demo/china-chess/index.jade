@@ -1,0 +1,22 @@
+extends layout$.jade
+
+block t
+ | 中国象棋
+
+block h
+  +style('china-chess')
+
+block b
+  .container
+    .grid-container
+      .top
+      .boundary
+        div 楚河
+        div 汉界
+      .bottom
+    .grid-href
+    .chess-container
+    button#restart 重新开始
+
+append script
+  +script(['china-chess', 'china-chess--inline'])

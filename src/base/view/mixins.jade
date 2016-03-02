@@ -1,0 +1,14 @@
+mixin script(items)
+  if typeof items === 'string'
+    - items = [items]
+  each item in items
+    if !item.endsWith('.js')
+      - item += '.js'
+    script(src=item)
+mixin style(items)
+  if typeof items === 'string'
+    - items = [items]
+  each item in items
+    if !item.endsWith('.css')
+      - item += '.css'
+    link(rel="stylesheet", href=item)

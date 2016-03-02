@@ -1,0 +1,17 @@
+extends layout$.jade
+
+block t
+ | 迷宫求解
+
+block h
+  +style('maze')
+
+block b
+  .container
+    #maze
+    #person.person
+    button#restart 重新开始
+
+append script
+  +script(['maze', 'maze--inline'])
+  

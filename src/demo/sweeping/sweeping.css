@@ -1,0 +1,44 @@
+.container {
+  list-style: none;
+  padding: 0;
+  width: 401px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  margin: 0 auto;
+  overflow: auto;
+  position: relative;
+  text-align: center;
+}
+
+.item {
+  float: left;
+  width: 49px;
+  height: 49px;
+  line-height: 49px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background: #aaa;
+}
+
+.signed {
+  background: green;
+}
+
+.clicked {
+  background: #fff;
+}
+
+.mine {
+  background: #f00;
+  animation: m .5s infinite;
+  color: #fff;
+}
+
+@keyframes m {
+  50% {
+    background: #fff;
+  }
+  to {
+    background: #f00;
+  }
+}

@@ -1,0 +1,16 @@
+extends layout$.jade
+
+block t
+ | 五子棋
+
+block h
+  +style('gobang')
+
+block b
+  .container
+    #gobang
+    #tip
+    #restart 重新开始
+
+append script
+  +script(['gobang', 'gobang--inline'])

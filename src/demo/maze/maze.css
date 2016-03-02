@@ -1,0 +1,46 @@
+.container {
+  list-style: none;
+  padding: 0;
+  width: 501px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  margin: 0 auto;
+  overflow: auto;
+  position: relative;
+}
+
+.item {
+  float: left;
+  width: 49px;
+  height: 49px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.item:first-child,
+.item:last-child {
+  background: #f0f;
+}
+
+.type1 {
+  background: #999;
+}
+
+.type2 {
+  background: #aa0
+}
+
+.type4 {
+  background: #000;
+}
+
+.person {
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 29px;
+  height: 29px;
+  background: #f00;
+  transition: .1s;
+}

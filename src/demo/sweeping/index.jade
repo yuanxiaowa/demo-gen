@@ -1,0 +1,18 @@
+extends layout$.jade
+
+block t
+ | 扫雷
+
+block h
+  +style('sweeping')
+
+block b
+  .container
+    #sweeping
+    div
+      #remain 0
+    button#restart 重新开始
+
+append script
+  +script(['sweeping', 'sweeping--inline'])
+  

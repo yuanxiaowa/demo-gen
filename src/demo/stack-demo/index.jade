@@ -1,0 +1,38 @@
+extends layout$.jade
+
+block t
+ | 栈问题
+
+block h
+  +style('stack-demo')
+
+block b
+  section#section1
+    fieldset
+      legend 括号匹配检验
+      input#txt(type="text")
+      button#btn 校验
+      #tip
+  section#section2
+    fieldset
+      legend 行编辑程序
+      div #去除前一个字符, @去除到行首字符
+      input#txt2(type="text")
+      button#btn2 添加
+      #tip2
+  section#section3
+    fieldset
+      legend 十进制转八进制
+      input#txt3(type="text")
+      button#btn3 转换
+      #tip3
+  section#section4
+    fieldset
+      legend 表达式求值
+      input#txt4(type="text")
+      button#btn4 求值
+      #tip4
+
+append script
+  +script(['expression'])
+  
