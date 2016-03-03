@@ -1,0 +1,21 @@
+extends layout$.jade
+
+block t
+ | 网页常用布局
+
+block h
+  +style('web-layout')
+
+block b
+  .container
+    section.section1
+      h3 右边占左边余下的空间
+      .clearfix
+        .fl 左边
+        .right.oa 右边
+    section.section2
+      h3
+
+append script
+  +script(['web-layout', 'web-layout--inline'])
+  

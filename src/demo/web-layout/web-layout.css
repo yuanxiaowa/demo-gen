@@ -1,0 +1,26 @@
+.container {
+  width: 800px;
+  background: #eee;
+  margin: 0 auto;
+}
+.fl {
+  float: left;
+}
+.oa {
+  overflow: auto;
+}
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+  }
+}
+.section1 {
+  .fl {
+    width: 300px;
+    opacity: .3;
+  }
+  .right {
+    background: #00f;
+  }
+}

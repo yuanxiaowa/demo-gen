@@ -11,9 +11,10 @@ gulp.task('server', function() {
       port: 8081
     },
     server: {
-      baseDir: [paths.output],
+      baseDir: '.',
       routes: {
-        '/': './'
+        '/': paths.output,
+        '/lib': paths.lib
       }
     }
   });

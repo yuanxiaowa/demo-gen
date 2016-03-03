@@ -25,8 +25,14 @@ var del = require('del');
 var paths = require('../paths');
 var errorHandler = require('../error-handler');
 var compileOptions = require('../babel-options');
+var resConfig = require('../res-config');
 
 var isProduct = process.argv.indexOf('product') > -1;
+if (isProduct) {
+  resConfig = resConfig.product;
+} else {
+  resConfig = resConfig.dev;
+}
 
 gulp.task('tpl', function() {
   var stream = gulp.src(paths.tpl)
@@ -35,6 +41,9 @@ gulp.task('tpl', function() {
     }))
     .pipe(jade({
       pretty: true
+    }))
+    .pipe(replace(/\$\{([^}]+)\}/g, function(_, _1) {
+      return resConfig[_1.trim()];
     }))
     .pipe(gulp.dest(paths.output));
   if (isProduct) {
@@ -85,4 +94,6 @@ gulp.task('script', function() {
 gulp.task('clean', function() {
   del([paths.output + '**/*', '!' + paths.output + '{.git,params.json,README.md}']);
 });
-gulp.task('build', runSequence('clean', ['css', 'script'], 'tpl'));
+gulp.task('build', function() {
+  runSequence('clean', ['css', 'script'], 'tpl');
+});
