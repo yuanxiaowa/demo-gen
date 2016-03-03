@@ -1,0 +1,21 @@
+{
+  "name": "demo-gen",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "yuanxiaowa <yuanxiaowa@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/yuanxiaowa/demo-gen",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

@@ -1,0 +1,12 @@
+.row {
+  margin-top: 20px;
+  background: #f0f0f0;
+  height: 20px;
+  text-align: center;
+}
+.item {
+  background: #000;
+  height: 20px;
+  float: left;
+  color: #fff;
+}

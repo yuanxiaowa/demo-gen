@@ -20,7 +20,6 @@ var cssnano = require('cssnano');
 var short = require('postcss-short');
 
 var runSequence = require('run-sequence');
-var del = require('del');
 
 var paths = require('../paths');
 var errorHandler = require('../error-handler');
@@ -91,9 +90,6 @@ gulp.task('script', function() {
     .pipe(gulp.dest(paths.output));
 });
 
-gulp.task('clean', function() {
-  del([paths.output + '**/*', '!' + paths.output + '{.git,params.json,README.md}']);
-});
 gulp.task('build', function() {
   runSequence('clean', ['css', 'script'], 'tpl');
 });

@@ -13,5 +13,5 @@ module.exports = {
   image: path.join(appRoot, all + '.{jpg,png,gif,svg}'),
   doc: 'doc',
   base: 'src/base',
-  lib: 'src/lib'
+  lib: 'bower_components'
 };

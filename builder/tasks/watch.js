@@ -15,7 +15,7 @@ gulp.task('watch', function () {
       fs.writeFile(path.join(stat.path, name + '--inline.js'), '');
       fs.writeFile(path.join(stat.path, name + '.css'), '');
       fs.writeFile(path.join(stat.path, 'index.jade')
-        , 'extends layout$.jade'
+        , 'extends layout$_bootstrap'
         + '\n\nblock t\n | ' + name
         + '\n\nblock h\n  +style(\'' + name + '\')'
         + '\n\nblock b\n  '
